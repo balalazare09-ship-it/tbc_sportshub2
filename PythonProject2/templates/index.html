@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-center my-5">
+    <h1 style="color: #00aeef; font-weight: 800;">CHAMPION'S EDGE</h1>
+    <p class="lead text-muted">პროფესიონალური სპორტული პორტალი და ანალიტიკური მონაცემები</p>
+</div>
+
+<div class="row">
+    <div class="col-md-4"><div class="sports-box"><h3>🏀 კალათბურთი</h3><a href="{{ url_for('basketball') }}" class="btn btn-sm btn-custom mt-2">გადასვლა</a></div></div>
+    <div class="col-md-4"><div class="sports-box"><h3>⚽ ფეხბურთი</h3><a href="{{ url_for('football') }}" class="btn btn-sm btn-custom mt-2">გადასვლა</a></div></div>
+    <div class="col-md-4"><div class="sports-box"><h3>🥊 UFC</h3><a href="{{ url_for('ufc') }}" class="btn btn-sm btn-custom mt-2">გადასვლა</a></div></div>
+    <div class="col-md-4"><div class="sports-box"><h3>🥋 ძიუდო</h3><a href="{{ url_for('judo') }}" class="btn btn-sm btn-custom mt-2">გადასვლა</a></div></div>
+    <div class="col-md-4"><div class="sports-box"><h3>🥊 ბოქსი</h3><a href="{{ url_for('boxing') }}" class="btn btn-sm btn-custom mt-2">გადასვლა</a></div></div>
+    <div class="col-md-4"><div class="sports-box" style="border-color: #ff4a4a;"><h3>🇬🇪 ნაკრები</h3><a href="{{ url_for('national') }}" class="btn btn-sm btn-danger mt-2">გადასვლა</a></div></div>
+</div>
+
+<div class="custom-card my-4 text-center">
+    <h4>💡 საიტის გაუმჯობესების იდეა გაქვთ?</h4>
+    <p>მოგვწერეთ მეილზე: <a href="mailto:balalazare09@gmail.com" class="text-info font-weight-bold">balalazare09@gmail.com</a></p>
+</div>
+
+<div class="my-5">
+    <h2 class="text-white border-bottom pb-2 mb-4">📢 სიახლეები (ადმინისტრატორისგან)</h2>
+    {% if posts %}
+        {% for post in posts %}
+            <div class="card bg-dark text-white mb-3" style="border: 1px solid #30363d;">
+                <div class="card-body">
+                    <h4 class="card-title text-info">{{ post.title }}</h4>
+                    <span class="badge badge-primary mb-2">{{ post.category }}</span>
+                    <p class="card-text">{{ post.content }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-muted">ჯერჯერობით სიახლეები არ არის.</p>
+    {% endif %}
+</div>
+{% endblock %}

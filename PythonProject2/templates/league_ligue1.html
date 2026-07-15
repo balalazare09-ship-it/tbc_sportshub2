@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="custom-card my-5">
+    <div class="text-center mb-4">
+        <span class="badge badge-info mb-2 px-3 py-2" style="font-size: 1rem;">საფრანგეთის ჩემპიონატი</span>
+        <h2 class="text-white font-weight-bold">🇫🇷 ლიგა 1 (Ligue 1)</h2>
+        <p class="text-muted">მიმდინარე სეზონის სატურნირო ცხრილი და სტატისტიკა</p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-dark table-hover table-bordered text-center mb-0" style="background-color: #161b22; border-color: #30363d;">
+            <thead style="background-color: #00aeef; color: #000;">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" class="text-left">გუნდი</th>
+                    <th scope="col">თ</th>
+                    <th scope="col">მ-ფ-წ</th>
+                    <th scope="col">გოლები</th>
+                    <th scope="col">+/-</th>
+                    <th scope="col">ქულა</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="font-weight-bold" style="background-color: rgba(40, 167, 69, 0.1);">
+                    <td>1</td><td class="text-left">PSG</td><td>34</td><td>24-4-6</td><td>74:29</td><td class="text-success">+45</td><td class="text-warning">76</td>
+                </tr>
+                <tr style="background-color: rgba(40, 167, 69, 0.1);">
+                    <td>2</td><td class="text-left">RC Lens</td><td>34</td><td>22-4-8</td><td>66:35</td><td class="text-success">+31</td><td class="text-warning font-weight-bold">70</td>
+                </tr>
+                <tr style="background-color: rgba(40, 167, 69, 0.1);">
+                    <td>3</td><td class="text-left">LOSC</td><td>34</td><td>18-7-9</td><td>52:37</td><td class="text-success">+15</td><td class="text-warning font-weight-bold">61</td>
+                </tr>
+                <tr style="background-color: rgba(40, 167, 69, 0.1);">
+                    <td>4</td><td class="text-left">OL</td><td>34</td><td>18-6-10</td><td>53:40</td><td class="text-success">+13</td><td class="text-warning font-weight-bold">60</td>
+                </tr>
+
+                <tr>
+                    <td>5</td><td class="text-left">OM</td><td>34</td><td>18-5-11</td><td>63:45</td><td class="text-success">+18</td><td class="font-weight-bold">59</td>
+                </tr>
+                <tr>
+                    <td>6</td><td class="text-left">Rennes</td><td>34</td><td>17-8-9</td><td>59:50</td><td class="text-success">+9</td><td class="font-weight-bold">59</td>
+                </tr>
+                <tr>
+                    <td>7</td><td class="text-left">AS Monaco</td><td>34</td><td>16-6-12</td><td>60:54</td><td class="text-success">+6</td><td class="font-weight-bold">54</td>
+                </tr>
+
+                <tr><td>8</td><td class="text-left">Strasbourg</td><td>34</td><td>15-8-11</td><td>58:47</td><td class="text-success">+11</td><td>53</td></tr>
+                <tr><td>9</td><td class="text-left">Toulouse FC</td><td>34</td><td>12-9-13</td><td>47:46</td><td class="text-success">+1</td><td>45</td></tr>
+                <tr><td>10</td><td class="text-left">FC Lorient</td><td>34</td><td>11-12-11</td><td>48:51</td><td class="text-danger">-3</td><td>45</td></tr>
+                <tr><td>11</td><td class="text-left">Paris FC</td><td>34</td><td>11-11-12</td><td>47:50</td><td class="text-danger">-3</td><td>44</td></tr>
+                <tr><td>12</td><td class="text-left">Brest</td><td>34</td><td>10-9-15</td><td>43:55</td><td class="text-danger">-12</td><td>39</td></tr>
+                <tr><td>13</td><td class="text-left">Angers SCO</td><td>34</td><td>9-9-16</td><td>29:48</td><td class="text-danger">-19</td><td>36</td></tr>
+                <tr><td>14</td><td class="text-left">Havre AC</td><td>34</td><td>7-14-13</td><td>32:44</td><td class="text-danger">-12</td><td>35</td></tr>
+                <tr><td>15</td><td class="text-left">AJ Auxerre</td><td>34</td><td>8-10-16</td><td>34:44</td><td class="text-danger">-10</td><td>34</td></tr>
+
+                <tr style="background-color: rgba(220, 53, 69, 0.1);">
+                    <td>16</td><td class="text-left">OGC Nice</td><td>34</td><td>7-11-16</td><td>37:60</td><td class="text-danger">-23</td><td>32</td>
+                </tr>
+                <tr style="background-color: rgba(220, 53, 69, 0.1);">
+                    <td>17</td><td class="text-left">FC Nantes</td><td>34</td><td>5-9-20</td><td>29:52</td><td class="text-danger">-23</td><td>24</td>
+                </tr>
+                <tr style="background-color: rgba(220, 53, 69, 0.1);">
+                    <td>18</td><td class="text-left">FC Metz</td><td>34</td><td>3-8-23</td><td>32:76</td><td class="text-danger">-44</td><td>17</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="{{ url_for('football') }}" class="btn btn-custom px-5 py-2 font-weight-bold">⬅ უკან ფეხბურთის გვერდზე</a>
+    </div>
+</div>
+{% endblock %}

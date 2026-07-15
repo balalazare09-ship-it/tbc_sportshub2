@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="custom-card text-center my-5">
+    <h2 class="text-info mb-4">⚽ ფეხბურთის ტოპ ლიგები და მსოფლიო ჩემპიონატი</h2>
+    <p class="text-muted mb-5">აირჩიეთ სასურველი ვარიანტი მიმდინარე შედეგებისა და ანალიტიკის სანახავად</p>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-3">
+            <a href="{{ url_for('bundesliga') }}" class="btn btn-outline-info btn-block py-4 font-weight-bold" style="font-size: 1.2rem;">
+                🇩🇪 ბუნდესლიგა (Bundesliga)
+            </a>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <a href="{{ url_for('laliga') }}" class="btn btn-outline-light btn-block py-4 font-weight-bold" style="font-size: 1.2rem;">
+                🇪🇸 ლალიგა (La Liga)
+            </a>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <a href="{{ url_for('ligue1') }}" class="btn btn-outline-light btn-block py-4 font-weight-bold" style="font-size: 1.2rem;">
+                🇫🇷 ლიგა 1 (Ligue 1)
+            </a>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <a href="{{ url_for('premierleague') }}" class="btn btn-outline-light btn-block py-4 font-weight-bold" style="font-size: 1.2rem;">
+                🏴󠁧󠁢󠁥󠁮󠁧󠁿 პრემიერ ლიგა (Premier League)
+            </a>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <a href="{{ url_for('seriea') }}" class="btn btn-outline-light btn-block py-4 font-weight-bold" style="font-size: 1.2rem;">
+                🇮🇹 სერია ა (Serie A)
+            </a>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <a href="{{ url_for('worldcup_football') }}" class="btn btn-outline-light btn-block py-4 font-weight-bold" style="font-size: 1.2rem;">
+                🏆 მსოფლიო ჩემპიონატი (World Cup)
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

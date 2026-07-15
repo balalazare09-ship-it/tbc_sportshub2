@@ -1,0 +1,53 @@
+/* --- საერთო სტილები --- */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* თიბისის პატარა ლოგო ჩარჩოში, რომელიც მარცხნივ ზემოთაა */
+.tbc-logo-small {
+    width: 45px;
+    height: auto;
+    border: 1px solid #17a2b8; /* ცისფერი ჩარჩო ლოგოს გარშემო */
+    padding: 2px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+/* მთავარი კონტეინერის ჩარჩო (რეგისტრაცია, ავტორიზაცია და სპორტის გვერდები) */
+.custom-sport-card {
+    border: 2px solid #000000; /* ჩარჩო შავი */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); /* გარშემო ცისფერი ჩარჩო/ნათება */
+    background-color: #ffffff; /* შიგნით თეთრი */
+    padding: 35px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* სპორტის ღილაკების სტილი მთავარ გვერდზე */
+.sport-btn {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px;
+    transition: all 0.3s ease;
+    border: 2px solid #343a40;
+}
+
+.sport-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* UFC, ძიუდოს და ბოქსის ლურჯი ოთხკუთხედი ღილაკები */
+.weight-btn-header {
+    background-color: #0056b3 !important; /* ლურჯი ოთხკუთხედი */
+    color: white !important;
+    font-weight: bold;
+    border: 1px solid #004085;
+}
+
+.weight-card {
+    border: 2px solid #0056b3 !important;
+    margin-bottom: 10px;
+}
+

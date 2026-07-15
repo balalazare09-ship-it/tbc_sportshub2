@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center my-5">
+    <div class="col-md-8">
+        <div class="custom-card border-warning">
+            <h2 class="text-warning mb-4">🛡️ ადმინ პანელი - პოსტის დამატება</h2>
+            <form method="POST" action="">
+                {{ form.hidden_tag() }}
+                <div class="form-group">
+                    {{ form.title.label(class="text-info font-weight-bold") }}
+                    {{ form.title(class="form-control bg-dark text-white border-secondary") }}
+                </div>
+                <div class="form-group">
+                    {{ form.category.label(class="text-info font-weight-bold") }}
+                    {{ form.category(class="form-control bg-dark text-white border-secondary") }}
+                </div>
+                <div class="form-group">
+                    {{ form.content.label(class="text-info font-weight-bold") }}
+                    {{ form.content(class="form-control bg-dark text-white border-secondary", rows="5") }}
+                </div>
+                {{ form.submit(class="btn btn-warning btn-block font-weight-bold text-dark") }}
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

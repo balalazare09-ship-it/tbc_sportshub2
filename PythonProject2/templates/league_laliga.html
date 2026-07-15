@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="custom-card my-5">
+    <div class="text-center mb-4">
+        <span class="badge badge-info mb-2 px-3 py-2" style="font-size: 1rem;">ესპანეთის ჩემპიონატი</span>
+        <h2 class="text-white font-weight-bold">🇪🇸 ლა ლიგა (La Liga)</h2>
+        <p class="text-muted">მიმდინარე სეზონის სატურნირო ცხრილი და სტატისტიკა</p>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-dark table-hover table-bordered text-center mb-0" style="background-color: #161b22; border-color: #30363d;">
+            <thead style="background-color: #00aeef; color: #000;">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" class="text-left">გუნდი</th>
+                    <th scope="col">თ</th>
+                    <th scope="col">მ-ფ-წ</th>
+                    <th scope="col">გოლები</th>
+                    <th scope="col">+/-</th>
+                    <th scope="col">ქულა</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="font-weight-bold" style="background-color: rgba(40, 167, 69, 0.1);">
+                    <td>1</td><td class="text-left">Real Madrid</td><td>38</td><td>29-8-1</td><td>87:26</td><td class="text-success">+61</td><td class="text-warning">95</td>
+                </tr>
+                <tr style="background-color: rgba(40, 167, 69, 0.1);">
+                    <td>2</td><td class="text-left">Barcelona</td><td>38</td><td>26-7-5</td><td>79:44</td><td class="text-success">+35</td><td class="text-warning font-weight-bold">85</td>
+                </tr>
+                <tr style="background-color: rgba(40, 167, 69, 0.1);">
+                    <td>3</td><td class="text-left">Girona</td><td>38</td><td>25-6-7</td><td>85:46</td><td class="text-success">+39</td><td class="text-warning font-weight-bold">81</td>
+                </tr>
+                <tr style="background-color: rgba(40, 167, 69, 0.1);">
+                    <td>4</td><td class="text-left">Atletico Madrid</td><td>38</td><td>24-4-10</td><td>70:43</td><td class="text-success">+27</td><td class="text-warning font-weight-bold">76</td>
+                </tr>
+
+                <tr>
+                    <td>5</td><td class="text-left">Athletic Club</td><td>38</td><td>19-11-8</td><td>61:37</td><td class="text-success">+24</td><td class="font-weight-bold">68</td>
+                </tr>
+                <tr>
+                    <td>6</td><td class="text-left">Real Sociedad</td><td>38</td><td>16-12-10</td><td>51:39</td><td class="text-success">+12</td><td class="font-weight-bold">60</td>
+                </tr>
+                <tr>
+                    <td>7</td><td class="text-left">Real Betis</td><td>38</td><td>14-15-9</td><td>48:45</td><td class="text-success">+3</td><td class="font-weight-bold">57</td>
+                </tr>
+
+                <tr><td>8</td><td class="text-left">Villarreal</td><td>38</td><td>14-11-13</td><td>69:65</td><td class="text-success">+4</td><td>53</td></tr>
+                <tr><td>9</td><td class="text-left">Valencia</td><td>38</td><td>13-10-15</td><td>40:45</td><td class="text-danger">-5</td><td>49</td></tr>
+                <tr><td>10</td><td class="text-left">Alaves</td><td>38</td><td>12-10-16</td><td>36:46</td><td class="text-danger">-10</td><td>46</td></tr>
+                <tr><td>11</td><td class="text-left">Osasuna</td><td>38</td><td>12-9-17</td><td>45:56</td><td class="text-danger">-11</td><td>45</td></tr>
+                <tr><td>12</td><td class="text-left">Getafe</td><td>38</td><td>10-13-15</td><td>42:54</td><td class="text-danger">-12</td><td>43</td></tr>
+                <tr><td>13</td><td class="text-left">Celta Vigo</td><td>38</td><td>11-8-19</td><td>46:57</td><td class="text-danger">-11</td><td>41</td></tr>
+                <tr><td>14</td><td class="text-left">Sevilla</td><td>38</td><td>10-11-17</td><td>48:54</td><td class="text-danger">-6</td><td>41</td></tr>
+                <tr><td>15</td><td class="text-left">Mallorca</td><td>38</td><td>8-16-14</td><td>33:44</td><td class="text-danger">-11</td><td>40</td></tr>
+                <tr><td>16</td><td class="text-left">Las Palmas</td><td>38</td><td>10-10-18</td><td>33:47</td><td class="text-danger">-14</td><td>40</td></tr>
+                <tr><td>17</td><td class="text-left">Rayo Vallecano</td><td>38</td><td>8-14-16</td><td>29:48</td><td class="text-danger">-19</td><td>38</td></tr>
+
+                <tr style="background-color: rgba(220, 53, 69, 0.1);">
+                    <td>18</td><td class="text-left">Cadiz</td><td>38</td><td>6-15-17</td><td>26:55</td><td class="text-danger">-29</td><td>33</td>
+                </tr>
+                <tr style="background-color: rgba(220, 53, 69, 0.1);">
+                    <td>19</td><td class="text-left">Almeria</td><td>38</td><td>3-12-23</td><td>43:75</td><td class="text-danger">-32</td><td>21</td>
+                </tr>
+                <tr style="background-color: rgba(220, 53, 69, 0.1);">
+                    <td>20</td><td class="text-left">Granada</td><td>38</td><td>4-9-25</td><td>38:79</td><td class="text-danger">-41</td><td>21</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="{{ url_for('football') }}" class="btn btn-custom px-5 py-2 font-weight-bold">⬅ უკან ფეხბურთის გვერდზე</a>
+    </div>
+</div>
+{% endblock %}

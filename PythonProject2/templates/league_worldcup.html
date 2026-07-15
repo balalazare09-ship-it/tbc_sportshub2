@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="custom-card my-5" style="background-color: #0d1117; border: 2px solid #00aeef; border-radius: 12px; padding: 25px;">
+
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <h4 class="text-warning border-bottom border-secondary pb-2">⚽ გოლები</h4>
+            <table class="table table-dark table-sm table-hover text-center">
+                <tbody>
+                    <tr><td>კილიან მბაპე</td><td>8</td></tr>
+                    <tr><td>ლიონელ მესი</td><td>8</td></tr>
+                    <tr><td>ერლინგ ჰოლანდი</td><td>7</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <h4 class="text-success border-bottom border-secondary pb-2">🎯 საგოლე პასები</h4>
+            <table class="table table-dark table-sm table-hover text-center">
+                <tbody>
+                    <tr><td>მაიკლ ოლის</td><td>5</td></tr>
+                    <tr><td>ბრაჰიმ დიასი</td><td>4</td></tr>
+                    <tr><td>ბრუნო გიმარაესი</td><td>4</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h4 class="text-info mb-4 border-bottom border-secondary pb-2">📊 ჯგუფური ეტაპი</h4>
+    <div class="row">
+        {% set groups = [
+            ('A', [('მექსიკა', 3, 7), ('ს.აფრიკა', 3, 4), ('ს.კორეა', 3, 3), ('ჩეხეთი', 3, 1)]),
+            ('B', [('შვეიცარია', 3, 7), ('კანადა', 3, 4), ('ბოსნია', 3, 4), ('ყატარი', 3, 1)]),
+            ('C', [('ბრაზილია', 3, 7), ('მაროკო', 3, 7), ('შოტლანდია', 3, 3), ('ჰაიტი', 3, 0)]),
+            ('D', [('აშშ', 3, 6), ('ავსტრალია', 3, 4), ('პარაგვაი', 3, 4), ('თურქეთი', 3, 3)]),
+            ('E', [('გერმანია', 3, 6), ('კოტ-დ\'ივუარი', 3, 6), ('ეკვადორი', 3, 4), ('კიურასაო', 3, 1)]),
+            ('F', [('ნიდერლანდები', 3, 7), ('იაპონია', 3, 5), ('შვედეთი', 3, 4), ('ტუნისი', 3, 0)]),
+            ('G', [('ბელგია', 3, 5), ('ეგვიპტე', 3, 5), ('ირანი', 3, 3), ('ახალი ზელანდია', 3, 3)]),
+            ('H', [('ესპანეთი', 3, 7), ('კაბო-ვერდე', 3, 3), ('ურუგვაი', 3, 2), ('საუდის არაბეთი', 3, 2)]),
+            ('I', [('იტალია', 3, 7), ('დანია', 3, 5), ('ალჟირი', 3, 4), ('პანამა', 3, 0)]),
+            ('J', [('პორტუგალია', 3, 7), ('ნიგერია', 3, 4), ('საბერძნეთი', 3, 3), ('ჩრდ. კორეა', 3, 2)]),
+            ('K', [('ნორვეგია', 3, 7), ('უკრაინა', 3, 5), ('იამაიკა', 3, 3), ('ჰონდურასი', 3, 1)]),
+            ('L', [('ინგლისი', 3, 7), ('ხორვატია', 3, 5), ('განა', 3, 3), ('პანამა', 3, 1)])
+        ] %}
+
+        {% for name, teams in groups %}
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+            <table class="table table-sm table-dark table-bordered text-center" style="font-size: 0.75rem;">
+                <thead class="thead-light"><tr><th colspan="2">ჯგუფი {{ name }}</th></tr></thead>
+                <tbody>
+                    {% for team_name, games, pts in teams %}
+                    <tr><td class="text-left">{{ team_name }}</td><td>{{ pts }}</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
